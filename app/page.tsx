@@ -23,7 +23,7 @@ export default function Page() {
                                                     <option>Honda</option>
                                                     <option>Nissan</option>
                                                 </select>
-                                                    <button type="button" tabIndex="-1"
+                                                    <button type="button"
                                                             className="btn dropdown-toggle btn-light"
                                                             data-bs-toggle="dropdown" role="combobox"
                                                             aria-owns="bs-select-1" aria-haspopup="listbox"
@@ -37,8 +37,7 @@ export default function Page() {
                                                         </div>
                                                     </button>
                                                     <div className="dropdown-menu ">
-                                                        <div className="inner show" role="listbox" id="bs-select-1"
-                                                             tabIndex="-1">
+                                                        <div className="inner show" role="listbox" id="bs-select-1">
                                                             <ul className="dropdown-menu inner show"
                                                                 role="presentation"></ul>
                                                         </div>
@@ -54,7 +53,7 @@ export default function Page() {
                                                     <option>Lamborghini</option>
                                                     <option>Sports Car</option>
                                                 </select>
-                                                    <button type="button" tabIndex="-1"
+                                                    <button type="button"
                                                             className="btn dropdown-toggle btn-light"
                                                             data-bs-toggle="dropdown" role="combobox"
                                                             aria-owns="bs-select-2" aria-haspopup="listbox"
@@ -68,7 +67,7 @@ export default function Page() {
                                                     </button>
                                                     <div className="dropdown-menu ">
                                                         <div className="inner show" role="listbox" id="bs-select-2"
-                                                             tabIndex="-1">
+                                                        >
                                                             <ul className="dropdown-menu inner show"
                                                                 role="presentation"></ul>
                                                         </div>
@@ -82,7 +81,7 @@ export default function Page() {
                                                     <option>United States</option>
                                                     <option>United Kingdom</option>
                                                 </select>
-                                                    <button type="button" tabIndex="-1"
+                                                    <button type="button"
                                                             className="btn dropdown-toggle btn-light"
                                                             data-bs-toggle="dropdown" role="combobox"
                                                             aria-owns="bs-select-3" aria-haspopup="listbox"
@@ -97,7 +96,7 @@ export default function Page() {
                                                     </button>
                                                     <div className="dropdown-menu ">
                                                         <div className="inner show" role="listbox" id="bs-select-3"
-                                                             tabIndex="-1">
+                                                        >
                                                             <ul className="dropdown-menu inner show"
                                                                 role="presentation"></ul>
                                                         </div>
@@ -113,7 +112,7 @@ export default function Page() {
                                                     <option>2020</option>
                                                     <option>2021</option>
                                                 </select>
-                                                    <button type="button" tabIndex="-1"
+                                                    <button type="button"
                                                             className="btn dropdown-toggle btn-light"
                                                             data-bs-toggle="dropdown" role="combobox"
                                                             aria-owns="bs-select-4" aria-haspopup="listbox"
@@ -127,7 +126,7 @@ export default function Page() {
                                                     </button>
                                                     <div className="dropdown-menu ">
                                                         <div className="inner show" role="listbox" id="bs-select-4"
-                                                             tabIndex="-1">
+                                                        >
                                                             <ul className="dropdown-menu inner show"
                                                                 role="presentation"></ul>
                                                         </div>
@@ -141,7 +140,7 @@ export default function Page() {
                                                     <option>New Car</option>
                                                     <option>Used Car</option>
                                                 </select>
-                                                    <button type="button" tabIndex="-1"
+                                                    <button type="button"
                                                             className="btn dropdown-toggle btn-light"
                                                             data-bs-toggle="dropdown" role="combobox"
                                                             aria-owns="bs-select-5" aria-haspopup="listbox"
@@ -156,7 +155,7 @@ export default function Page() {
                                                     </button>
                                                     <div className="dropdown-menu ">
                                                         <div className="inner show" role="listbox" id="bs-select-5"
-                                                             tabIndex="-1">
+                                                        >
                                                             <ul className="dropdown-menu inner show"
                                                                 role="presentation"></ul>
                                                         </div>
