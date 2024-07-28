@@ -4722,17 +4722,18 @@ input[type=checkbox]:checked + label:before {
 .main-footer-2 {
     position: relative;
     text-align: center;
-    padding-top: 50px;
+    padding: 100px 0;
     top: 0;
     left: 0;
     width: 100%;
     content: "";
+    background: url("/img/img-10.png");
     background-size: cover;
     background-position: 50%;
 }
 
 .main-footer-2 .footer-menu ul {
-    margin-bottom: 40px;
+    margin-bottom: 0;
 }
 
 .main-footer-2 .footer-menu ul li, .footer-menu ul li a {
@@ -5420,6 +5421,7 @@ input[type=checkbox]:checked + label:before {
     position: absolute;
     top: 0;
     right: 0;
+    background: url("/img/img-7.png");
     background-position: center center;
     background-size: cover;
 }
@@ -6050,7 +6052,7 @@ input[type=checkbox]:checked + label:before {
 }
 
 .content-area-5 {
-    padding: 100px 0;
+    padding: 150px 0 50px 0;
 }
 
 .content-area-6 {
