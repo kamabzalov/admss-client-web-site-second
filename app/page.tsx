@@ -252,11 +252,11 @@ export default async function Page() {
                                                 <h1>Our <span>Testimonial</span></h1>
                                             </div>
                                             <p className="mb-30">Lorem Ipsum is simply dummy text of the printing and
-                                                typesetting industry. Lorem Ipsum has been the industry's standard dummy
-                                                text everLorem industry's standard dummy text everLorem Ipsum Lorem
+                                                typesetting industry. Lorem Ipsum has been the industrys standard dummy
+                                                text everLorem industrys standard dummy text everLorem Ipsum Lorem
                                                 Ipsum is simply dummy text of the printing. as been the industry</p>
                                             <div className="user-info d-flex">
-                                                <a className="pr-3" href="#" tabIndex="-1">
+                                                <a className="pr-3" href="/">
                                                     <img src="/img/avatar-3.png" alt="testimonial-user"
                                                          className="flex-shrink-0 me-3"/>
                                                 </a>
@@ -276,8 +276,8 @@ export default async function Page() {
                                                 <h1>Our <span>Testimonial</span></h1>
                                             </div>
                                             <p className="mb-30">Lorem Ipsum is simply dummy text of the printing and
-                                                typesetting industry. Lorem Ipsum has been the industry's standard dummy
-                                                text everLorem industry's standard dummy text everLorem Ipsum Lorem
+                                                typesetting industry. Lorem Ipsum has been the industrys standard dummy
+                                                text everLorem industrys standard dummy text everLorem Ipsum Lorem
                                                 Ipsum is simply dummy text of the printing. as been the industry</p>
                                             <div className="user-info d-flex">
                                                 <a className="pr-3" href="#">
@@ -300,8 +300,8 @@ export default async function Page() {
                                                 <h1>Our <span>Testimonial</span></h1>
                                             </div>
                                             <p className="mb-30">Lorem Ipsum is simply dummy text of the printing and
-                                                typesetting industry. Lorem Ipsum has been the industry's standard dummy
-                                                text everLorem industry's standard dummy text everLorem Ipsum Lorem
+                                                typesetting industry. Lorem Ipsum has been the industrys standard dummy
+                                                text everLorem industrys standard dummy text everLorem Ipsum Lorem
                                                 Ipsum is simply dummy text of the printing. as been the industry</p>
                                             <div className="user-info d-flex">
                                                 <a className="pr-3" href="#">
@@ -340,7 +340,7 @@ export default async function Page() {
                                     <div className="detail">
                                         <h4><a href="services.html">Highly Secured</a></h4>
                                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                            Lorem Ipsum has been the industry's standard dummy text ever since the
+                                            Lorem Ipsum has been the industrys standard dummy text ever since the
                                             1500s, when an unknown printer It has survived</p>
                                     </div>
                                 </div>
@@ -355,7 +355,7 @@ export default async function Page() {
                                     <div className="detail">
                                         <h4><a href="services.html">Get an Offer</a></h4>
                                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                            Lorem Ipsum has been the industry's standard dummy text ever since the
+                                            Lorem Ipsum has been the industrys standard dummy text ever since the
                                             1500s, when an unknown printer It has survived</p>
                                     </div>
                                 </div>
@@ -370,7 +370,7 @@ export default async function Page() {
                                     <div className="detail">
                                         <h4><a href="services.html">Free Support</a></h4>
                                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                            Lorem Ipsum has been the industry's standard dummy text ever since the
+                                            Lorem Ipsum has been the industrys standard dummy text ever since the
                                             1500s, when an unknown printer It has survived</p>
                                     </div>
                                 </div>
