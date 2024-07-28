@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Header() {
     return (
         <header className="main-header sticky-header header-with-top" id="main-header-2">
@@ -11,11 +13,15 @@ export default function Header() {
                     </button>
                     <div className="navbar-collapse collapse w-100 justify-content-end" id="navbar">
                         <ul className="navbar-nav ml-auto">
-                            <li className="nav-item dropdown active">
-                                <a className="nav-link dropdown-toggle" href="/"
-                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <li className="nav-item ">
+                                <Link className="nav-link" href="/">
                                     Home
-                                </a>
+                                </Link>
+                            </li>
+                            <li className="nav-item ">
+                                <Link className="nav-link" href="/contacts">
+                                    Contacts
+                                </Link>
                             </li>
                         </ul>
                     </div>
