@@ -37,6 +37,11 @@ html, body {
     /* font-family: 'Open Sans', sans-serif; */
 }
 
+main {
+    margin-top: 100px;
+    min-height: 100%;
+}
+
 a {
     cursor: pointer;
     color: #2a2a2a;
@@ -873,10 +878,6 @@ input[type=checkbox]:checked + label:before {
     z-index: 1;
     width: 100%;
     text-align: center;
-}
-
-.banner .carousel-content.bi-2{
-    padding-top: 100px;
 }
 
 .carousel-item .text-right {
