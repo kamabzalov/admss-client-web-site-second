@@ -1,5 +1,6 @@
 import { API_HOST, API_KEY } from "@/app/app-config";
 import { Inventory } from "@/app/models/inventory";
+import Link from "next/link";
 
 async function getData() {
     const response = await fetch(`${API_HOST}list/0`, {
@@ -213,7 +214,9 @@ export default async function Page() {
                                         <div className="detail">
                                             <div className="top">
                                                 <h1>
-                                                    <a href="#">{inventory.Make} {inventory.Model}</a><span>${inventory.CostPrice}</span>
+                                                    <Link
+                                                        href={`/inventory/${inventory.itemuid}`}>{inventory.Make} {inventory.Model}</Link>
+                                                    <span>${inventory.CostPrice}</span>
                                                 </h1>
                                                 <p>Build year: <span>{inventory.Year}</span></p>
                                             </div>
