@@ -1,6 +1,7 @@
 const nextConfig = {
     output: 'export',
-    assetPrefix: './'
+    assetPrefix: './',
+    trailingSlash: true
 };
 
 export default nextConfig;
