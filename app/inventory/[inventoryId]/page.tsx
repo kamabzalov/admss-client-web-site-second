@@ -21,7 +21,7 @@ export default async function InventoryCard(params: { params: { inventoryId: str
     })
     const inventoryData: Inventory = await getInventoryDataById.json();
     return (
-        <div className="car-details-page content-area">
+        <div class="car-details-page content-area">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-8 col-md-12 col-xs-12">
@@ -74,7 +74,7 @@ export default async function InventoryCard(params: { params: { inventoryId: str
                                         <span>Mileage</span>{inventoryData.mileage} mi
                                     </li>
                                     <li>
-                                        <span>Interior Color</span>{inventoryData.InteriorColor}
+                                        <span>Interior Color</span>{inventoryData.InteriorColor} 
                                     </li>
                                     <li>
                                         <span>Transmission</span>{inventoryData.Transmission}
