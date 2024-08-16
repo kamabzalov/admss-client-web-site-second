@@ -1,6 +1,6 @@
 import { Inventory } from "@/app/models/inventory";
 import { API_HOST, API_KEY } from "@/app/app-config";
-import { Base } from "@/app/models/base";
+import { Base, Filters } from "@/app/models/base";
 
 export async function getInventories(filter?: string): Promise<Inventory[]> {
     const query = new URLSearchParams(filter).toString();
@@ -60,6 +60,16 @@ export async function getAvailableCategories(): Promise<Base[]> {
 
 export async function getAvailablePrices(): Promise<Base[]> {
     const response = await fetch(`${API_HOST}filter/price`, {
+        headers: {
+            Authorization: `Basic ${API_KEY}`,
+        }
+    });
+    return await response.json();
+}
+
+
+export async function getFilters(): Promise<Filters[]> {
+    const response = await fetch(`${API_HOST}filter/all`, {
         headers: {
             Authorization: `Basic ${API_KEY}`,
         }

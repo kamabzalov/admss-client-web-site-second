@@ -7,21 +7,15 @@ import {
     getAvailableLocations,
     getAvailableModels,
     getAvailablePrices,
-    getAvailableYears,
+    getAvailableYears, getFilters,
     getInventories
 } from "@/app/http";
+import { Filters } from "@/app/models/base";
 
 
 export default async function Page({searchParams}: any) {
     let data: Inventory[] = await getInventories();
-    const entities = await Promise.all([
-        getAvailableBrands(),
-        getAvailableModels(),
-        getAvailableLocations(),
-        getAvailableYears(),
-        getAvailableCategories(),
-        getAvailablePrices()
-    ]);
+    const entities: Filters[] = await getFilters();
 
     if (Object.keys(searchParams).length) {
         data = await getInventories(searchParams);
