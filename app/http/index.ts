@@ -21,3 +21,13 @@ export async function getFilters(): Promise<Filters[]> {
     });
     return await response.json();
 }
+
+
+export async function getFilters(): Promise<Filters[]> {
+    const response = await fetch(`${API_HOST}filter/all`, {
+        headers: {
+            Authorization: `Basic ${API_KEY}`,
+        }
+    });
+    return await response.json();
+}
