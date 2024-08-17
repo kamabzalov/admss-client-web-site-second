@@ -1,17 +1,9 @@
 import { Inventory } from "@/app/models/inventory";
 import Link from "next/link";
 import FiltersForm from "@/app/components/ui/filters-form";
-import {
-    getAvailableBrands,
-    getAvailableCategories,
-    getAvailableLocations,
-    getAvailableModels,
-    getAvailablePrices,
-    getAvailableYears, getFilters,
-    getInventories
-} from "@/app/http";
+import { getFilters, getInventories } from "@/app/http";
 import { Filters } from "@/app/models/base";
-
+import InventoriesList from "@/app/components/inventories-list";
 
 export default async function Page({searchParams}: any) {
     let data: Inventory[] = await getInventories();
@@ -40,57 +32,7 @@ export default async function Page({searchParams}: any) {
                     </div>
                 </div>
             </div>
-            <div className="featured-car content-area">
-                <div className="container">
-                    <div className="main-title">
-                        <h2>Featured Cars</h2>
-                        <p className="mb-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                            eiusmod</p>
-                    </div>
-
-                    <div className="row filter-portfolio">
-                        {data.map((inventory: Inventory, index: number) => {
-                            return (
-                                <div key={index} className="col-lg-4 col-md-6 col-sm-12 filtr-item col-pad">
-                                    <div className="car-box">
-                                        <div className="photo-thumbnail">
-                                            <div className="photo">
-                                                <a href="/">
-                                                    <span className="blog-one__plus"></span>
-                                                </a>
-                                            </div>
-                                            <div className="tag">Featured</div>
-                                        </div>
-                                        <div className="detail">
-                                            <div className="top">
-                                                <h1>
-                                                    <Link
-                                                        href={`/inventory/${inventory.itemuid}`}>{inventory.Make} {inventory.Model}</Link>
-                                                    <span>${inventory.CostPrice}</span>
-                                                </h1>
-                                                <p>Build year: <span>{inventory.Year}</span></p>
-                                            </div>
-                                            <div className="footer">
-                                                <ul className="facilities-list clearfix">
-                                                    <li>
-                                                        <i className="flaticon-way"></i> {inventory.mileage} miles
-                                                    </li>
-                                                    <li>
-                                                        <i className="flaticon-manual-transmission"></i> {inventory.Transmission}
-                                                    </li>
-                                                    <li>
-                                                        <i className="flaticon-calendar-1"></i> {inventory.Year}
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            )
-                        })}
-                    </div>
-                </div>
-            </div>
+            {data.length ? <InventoriesList inventories={data}/> : null}
             <div className="testimonial-4">
                 <div className="container">
                     <div className="row">
