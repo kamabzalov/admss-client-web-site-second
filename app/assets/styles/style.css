@@ -623,7 +623,8 @@ input[type=checkbox]:checked + label:before {
     font-size: 16px;
     line-height: 30px;
     border-bottom: 1px dotted #DDD;
-    text-align: right;
+    display: flex;
+    justify-content: space-between;
 }
 
 .advanced-search ul li:last-child{

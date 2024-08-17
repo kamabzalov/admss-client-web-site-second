@@ -1,18 +1,6 @@
 import { API_HOST, API_KEY } from "@/app/app-config";
 import { Inventory } from "@/app/models/inventory";
 
-export async function generateStaticParams() {
-    const inventories = await fetch(`${API_HOST}list/0`, {
-        headers: {
-            Authorization: `Basic ${API_KEY}`,
-        }
-    }).then((res) => res.json());
-
-    return inventories.map((inventory: Inventory) => ({
-        inventoryId: inventory.itemuid,
-    }))
-}
-
 export default async function InventoryCard(params: { params: { inventoryId: string } }) {
     const getInventoryDataById = await fetch(`${API_HOST}item/${params.params.inventoryId}`, {
         headers: {
@@ -20,6 +8,8 @@ export default async function InventoryCard(params: { params: { inventoryId: str
         }
     })
     const inventoryData: Inventory = await getInventoryDataById.json();
+    const preview = inventoryData.media && inventoryData.media[0];
+
     return (
         <div className="car-details-page content-area">
             <div className="container">
@@ -31,7 +21,7 @@ export default async function InventoryCard(params: { params: { inventoryId: str
                                     <h3>{inventoryData.Make} {inventoryData.Model}</h3>
                                 </div>
                                 <div className="pull-right">
-                                    <h3>$ {inventoryData.Price}</h3>
+                                    <h3>$ {inventoryData.ListPrice}</h3>
                                 </div>
                             </div>
                             <div className="Description mb-50">
@@ -65,22 +55,34 @@ export default async function InventoryCard(params: { params: { inventoryId: str
                                         <span>Model</span>{inventoryData.Model}
                                     </li>
                                     <li>
+                                        <span>VIN</span>{inventoryData.VIN}
+                                    </li>
+                                    <li>
                                         <span>Body Style</span>{inventoryData.BodyStyle}
                                     </li>
                                     <li>
                                         <span>Year</span>{inventoryData.Year}
                                     </li>
                                     <li>
-                                        <span>Mileage</span>{inventoryData.mileage} mi
+                                        <span>Condition</span>Brand New
                                     </li>
                                     <li>
-                                        <span>Interior Color</span>{inventoryData.InteriorColor} 
+                                        <span>Mileage</span>{inventoryData.mileage}
+                                    </li>
+                                    <li>
+                                        <span>Interior Color</span>{inventoryData.InteriorColor}
                                     </li>
                                     <li>
                                         <span>Transmission</span>{inventoryData.Transmission}
                                     </li>
                                     <li>
                                         <span>Engine</span>{inventoryData.Engine}
+                                    </li>
+                                    <li>
+                                        <span>No. of Gears:</span>5
+                                    </li>
+                                    <li>
+                                        <span>Location</span>Toronto
                                     </li>
                                     <li>
                                         <span>Fuel Type</span>{inventoryData.TypeOfFuel}
