@@ -5860,6 +5860,9 @@ input[type=checkbox]:checked + label:before {
     background: #fff;
     color: #000;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .contact-1 .contact-details .ci-box{
@@ -6030,7 +6033,7 @@ input[type=checkbox]:checked + label:before {
 }
 
 .content-area-5 {
-    padding: 150px 0 50px 0;
+    padding: 50px 0;
 }
 
 .content-area-6 {

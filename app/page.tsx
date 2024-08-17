@@ -1,17 +1,8 @@
 import { Inventory } from "@/app/models/inventory";
 import Link from "next/link";
 import FiltersForm from "@/app/components/ui/filters-form";
-import {
-    getAvailableBrands,
-    getAvailableCategories,
-    getAvailableLocations,
-    getAvailableModels,
-    getAvailablePrices,
-    getAvailableYears, getFilters,
-    getInventories
-} from "@/app/http";
+import { getFilters, getInventories } from "@/app/http";
 import { Filters } from "@/app/models/base";
-
 
 export default async function Page({searchParams}: any) {
     let data: Inventory[] = await getInventories();
@@ -49,7 +40,7 @@ export default async function Page({searchParams}: any) {
                     </div>
 
                     <div className="row filter-portfolio">
-                        {data.map((inventory: Inventory, index: number) => {
+                        {data.length && data.map((inventory: Inventory, index: number) => {
                             return (
                                 <div key={index} className="col-lg-4 col-md-6 col-sm-12 filtr-item col-pad">
                                     <div className="car-box">
@@ -66,7 +57,7 @@ export default async function Page({searchParams}: any) {
                                                 <h1>
                                                     <Link
                                                         href={`/inventory/${inventory.itemuid}`}>{inventory.Make} {inventory.Model}</Link>
-                                                    <span>${inventory.CostPrice}</span>
+                                                    <span>${inventory.ListPrice}</span>
                                                 </h1>
                                                 <p>Build year: <span>{inventory.Year}</span></p>
                                             </div>
