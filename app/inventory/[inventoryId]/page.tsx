@@ -1,15 +1,8 @@
-import { API_HOST, API_KEY } from "@/app/app-config";
-import { Inventory } from "@/app/models/inventory";
+import { getInventoryData } from "@/app/http";
+import ImageCarousel from "@/app/components/ui/carousel";
 
-export default async function InventoryCard(params: { params: { inventoryId: string } }) {
-    const getInventoryDataById = await fetch(`${API_HOST}item/${params.params.inventoryId}`, {
-        headers: {
-            Authorization: `Basic ${API_KEY}`,
-        }
-    })
-    const inventoryData: Inventory = await getInventoryDataById.json();
-    const preview = inventoryData.media && inventoryData.media[0];
-
+export default async function Page(params: { params: { inventoryId: string } }) {
+    const inventoryData = await getInventoryData(params)
     return (
         <div className="car-details-page content-area">
             <div className="container">
@@ -24,28 +17,19 @@ export default async function InventoryCard(params: { params: { inventoryId: str
                                     <h3>$ {inventoryData.ListPrice}</h3>
                                 </div>
                             </div>
-                            <div className="Description mb-50">
-                                <h3 className="heading-2">Description</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque.
-                                    Nulla finibus lobortis pulvinar. Donec a consectetur nulla. Nulla posuere sapien
-                                    vitae lectus suscipit, et pulvinar nisi tincidunt. Aliquam erat volutpat. Curabitur
-                                    convallis fringilla diam sed aliquam. Sed tempor iaculis massa faucibus feugiat. In
-                                    fermentum facilisis massa, a consequat purus viverra a. Aliquam pellentesque nibh et
-                                    nibh feugiat gravida. Maecenas ultricies, diam vitae semper placerat, velit risus
-                                    accumsan nisl, eget tempor lacus est vel nunc. Proin accumsan elit sed neque euismod
-                                    fringilla. Curabitur lobortis nunc velit, et fermentum urna dapibus non. Vivamus
-                                    magna lorem, elementum id gravida ac, laoreet tristique augue. Maecenas dictum lacus
-                                    eu nunc porttitor, ut hendrerit arcu efficitur.</p>
-                            </div>
                             <div className="inside-car mb-50">
-                                <h3 className="heading-2">Video</h3>
-                                <iframe src="https://www.youtube.com/embed/V7IrnC9MISU" allowFullScreen></iframe>
+                                <ImageCarousel images={inventoryData.media}
+                                               caption={inventoryData.Make + ' ' + inventoryData.Model}/>
+                            </div>
+                            <div className="Description">
+                                <h3 className="heading-2">Description</h3>
+                                <p>{inventoryData.Notes}</p>
                             </div>
                         </div>
                     </div>
                     <div className="col-lg-4 col-md-12">
                         <div className="sidebar-right">
-                            <div className="widget advanced-search d-none d-xl-block d-lg-block">
+                            <div className="widget advanced-search">
                                 <h3 className="sidebar-title">Booking This Car</h3>
                                 <ul>
                                     <li>

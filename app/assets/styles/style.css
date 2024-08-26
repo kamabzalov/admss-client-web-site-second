@@ -980,7 +980,7 @@ input[type=checkbox]:checked + label:before {
     max-width: 600px!important;
 }
 
-.banner .carousel-control-next, .carousel-control-prev {
+.carousel-control-next, .carousel-control-prev {
     background: #423b3b57;
     width: 40px;
     height: 60px;
@@ -2746,7 +2746,7 @@ input[type=checkbox]:checked + label:before {
 
 .car-box-3 .facilities-list li {
     list-style: none;
-    float: left;
+    display: inline-flex;
     width: 33.33%;
     font-weight: 400;
     margin-bottom: 10px;
@@ -2756,6 +2756,7 @@ input[type=checkbox]:checked + label:before {
 .car-box-3 .facilities-list li i{
     font-weight: 500;
     font-size: 15px;
+    margin-right: 4px;
 }
 
 .car-box-3 .detail .location {
@@ -8561,6 +8562,10 @@ table {
     font-size: 17px;
     width: 70%;
     float: left;
+}
+
+.carousel-caption h5 {
+    color: #fff;
 }
 
 #full-page-search .full-page-search-box {

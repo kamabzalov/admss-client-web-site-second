@@ -54,3 +54,4 @@ export interface Inventory {
     useruid: string;
     media: Array<Media>;
 }
+

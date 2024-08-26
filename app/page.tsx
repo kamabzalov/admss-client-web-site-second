@@ -1,13 +1,26 @@
 import { Inventory } from "@/app/models/inventory";
-import Link from "next/link";
 import FiltersForm from "@/app/components/ui/filters-form";
-import { getFilters, getInventories } from "@/app/http";
-import { Filters } from "@/app/models/base";
 import InventoriesList from "@/app/components/inventories-list";
+import {
+    getAvailableBrands,
+    getAvailableCategories,
+    getAvailableLocations,
+    getAvailableModels,
+    getAvailablePrices,
+    getAvailableYears,
+    getInventories
+} from "@/app/http";
 
 export default async function Page({searchParams}: any) {
     let data: Inventory[] = await getInventories();
-    const entities: Filters[] = await getFilters();
+    const entities = await Promise.all([
+        getAvailableBrands(),
+        getAvailableModels(),
+        getAvailableLocations(),
+        getAvailableYears(),
+        getAvailableCategories(),
+        getAvailablePrices()
+    ]);
 
     if (Object.keys(searchParams).length) {
         data = await getInventories(searchParams);
