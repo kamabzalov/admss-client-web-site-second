@@ -53,5 +53,6 @@ export interface Inventory {
     updated: Date;
     useruid: string;
     media: Array<Media>;
+    logo: string;
 }
 
