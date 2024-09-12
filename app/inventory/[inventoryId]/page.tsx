@@ -1,5 +1,6 @@
 import { getInventoryData } from "@/app/http";
 import ImageCarousel from "@/app/components/ui/carousel";
+import InventoryActions from "@/app/components/ui/inventory-actions";
 
 export default async function Page(params: { params: { inventoryId: string } }) {
     const inventoryData = await getInventoryData(params)
@@ -24,6 +25,8 @@ export default async function Page(params: { params: { inventoryId: string } }) 
                             <div className="Description">
                                 <h3 className="heading-2">Description</h3>
                                 <p>{inventoryData.Notes}</p>
+
+                                <InventoryActions carName={inventoryData.Make + inventoryData.Model}/>
                             </div>
                         </div>
                     </div>
