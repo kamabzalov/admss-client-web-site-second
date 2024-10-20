@@ -17,6 +17,7 @@ export interface Inventory {
     ExtraPrice1: number;
     ExtraPrice2: number;
     ExtraPrice3: number;
+    locationname: string;
     FactoryCertified: number;
     GroupClass: string;
     GroupClassName: string;

@@ -134,6 +134,22 @@ export default async function Page({searchParams}: any) {
             <div className="advantages content-area-5 bg-grea-3">
                 <div className="container">
                     <div className="main-title-3">
+                        <h1>Make <span>the Order</span></h1>
+                    </div>
+
+                    <div className="row">
+                        <div className="col-12">
+                        <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d104710.50765498672!2d33.5378337094314!3d34.90134569505271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14e082a16c40cb13%3A0x4fcbf0221371d0a5!2z0JvQsNGA0L3QsNC60LAsINCa0LjQv9GA!5e0!3m2!1sru!2s!4v1729349145275!5m2!1sru!2s"
+                                width="100%" height="450" loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="advantages content-area-5 bg-grea-3">
+                <div className="container">
+                    <div className="main-title-3">
                         <p>We Are The Best</p>
                         <h1>Our <span>Advantages</span></h1>
                     </div>
