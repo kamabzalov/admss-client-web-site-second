@@ -1,9 +1,10 @@
 import { getInventoryData } from "@/app/http";
 import ImageCarousel from "@/app/components/ui/carousel";
 import InventoryActions from "@/app/components/ui/inventory-actions";
+import { Inventory } from "@/app/models/inventory";
 
 export default async function Page(params: { params: { inventoryId: string } }) {
-    const inventoryData = await getInventoryData(params)
+    const inventoryData: Inventory = await getInventoryData(params)
     return (
         <div className="car-details-page content-area">
             <div className="container">
@@ -45,13 +46,13 @@ export default async function Page(params: { params: { inventoryId: string } }) 
                                         <span>VIN</span>{inventoryData.VIN}
                                     </li>
                                     <li>
+                                        <span>Stock No.</span>{inventoryData.StockNo}
+                                    </li>
+                                    <li>
                                         <span>Body Style</span>{inventoryData.BodyStyle}
                                     </li>
                                     <li>
                                         <span>Year</span>{inventoryData.Year}
-                                    </li>
-                                    <li>
-                                        <span>Condition</span>Brand New
                                     </li>
                                     <li>
                                         <span>Mileage</span>{inventoryData.mileage}
@@ -65,11 +66,9 @@ export default async function Page(params: { params: { inventoryId: string } }) 
                                     <li>
                                         <span>Engine</span>{inventoryData.Engine}
                                     </li>
+                                
                                     <li>
-                                        <span>No. of Gears:</span>5
-                                    </li>
-                                    <li>
-                                        <span>Location</span>Toronto
+                                        <span>Location</span>{inventoryData.locationname}
                                     </li>
                                     <li>
                                         <span>Fuel Type</span>{inventoryData.TypeOfFuel}
